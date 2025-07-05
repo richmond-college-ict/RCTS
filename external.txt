@@ -1,0 +1,304 @@
+
+    <!-- ======= Testimonials Section ======= -->
+    <?php
+    include 'controller/connection.php';
+    include 'data/review-data.php';
+    $data = getReviews($con);
+    if ($data) {
+      ?>
+      <div id="reviews">
+        <div class="section-title" data-aos="fade-up" style="background-color: #fff;">
+          <h2 style="color: #000;">Reviews</h2>
+          <p style="color: #000;">These are the reviews for ENOVUS'23</p>
+        </div>
+        <div class="testimonials">
+          <div class="container" data-aos="zoom-in">
+            <div class="quote-icon">
+              <i class="bx bxs-quote-right"></i>
+            </div>
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+                <?php
+                foreach ($data as $reviewData) {
+                  //
+                  ?>
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <p>
+                        <!-- Message -->
+                        <?= $reviewData[1] ?>
+                      </p>
+                      <h3>
+                        <?= $reviewData[2] ?>
+                      </h3>
+                      <h4>
+                        <?= $reviewData[3] ?>
+                      </h4>
+                      <h4>
+                        <?= $reviewData[4] ?>
+                      </h4>
+                    </div>
+                    <!-- <div class="text-center"><br/>
+                  <a class="btn btn-outline-info" href='add-reviews.php'>Add a new Review</a>
+                </div> -->
+                  </div><!-- End testimonial item -->
+                <?php } ?>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Testimonials Section -->
+    <?php } else { ?>
+      <!-- <script>
+        $(document).ready(function () {
+          Swal.fire({
+            title: 'Would you like to give a review about our Technology Day?',
+            showDenyButton: true,
+            icon: 'question',
+            confirmButtonText: 'Yes',
+            denyButtonText: `No`,
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              // Swal.fire('Saved!', '', 'success');
+              window.location.href = "add-reviews.php";
+            } else if (result.isDenied) {
+              // Swal.fire('Changes are not saved', '', 'info');
+            }
+          });
+        });
+      </script> -->
+    <?php } ?>
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq" style="background-color: #fff;">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 style="color: #000;">Frequently Asked Questions</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li data-aos="fade-up">
+            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1" style="color: #000;">What is
+              Technology?<i class="bx bx-chevron-down icon-show"></i>
+              <i class="bx bx-x icon-close"></i></a>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Technology refers to the tools, techniques, and systems that are developed through scientific
+                knowledge and used to
+                solve problems or improve human life. It includes everything from simple tools like a hammer or a
+                knife to complex
+                systems like computers, smartphones, and the internet. Technology is constantly evolving and has a
+                significant impact on
+                various aspects of our lives, including communication, education, healthcare, entertainment, and work.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100">
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed" style="color: #000;">How does
+              technology affect our
+              lives? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Technology affects our lives in many ways, including the way we communicate, learn, work, and
+                entertain ourselves. It has made many tasks easier and more efficient, but it has also created new
+                challenges and concerns, such as the impact on privacy and social relationships.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed" style="color: #000;">What is
+              Engineering Technology? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Engineering technology is a field of study that focuses on the practical application of engineering
+                principles. It
+                involves the use of scientific and mathematical principles to design, develop, and improve technology
+                and engineering
+                systems. Engineering technology programs typically emphasize hands-on learning and practical skills
+                development, and
+                graduates are often prepared for careers in fields such as manufacturing, construction, electronics,
+                and
+                telecommunications.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="300">
+            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed" style="color: #000;">What is Genetic
+              engineering? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Genetic engineering is the process of manipulating the genetic material of an organism to alter its
+                characteristics or
+                traits. This is done by inserting, deleting, or modifying specific genes in the DNA of an organism.
+                Genetic engineering
+                can be used to create new organisms with desirable traits, such as disease resistance or increased
+                productivity, or to
+                modify existing organisms to improve their performance or to treat genetic disorders. It has
+                applications in fields such
+                as agriculture, medicine, and biotechnology. However, genetic engineering also raises ethical and
+                safety concerns, and
+                its use is regulated in many countries.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="400">
+            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed" style="color: #000;">What is Robotics?
+              <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Robotics is a branch of technology that deals with the design, construction, operation, and use of
+                robots. A robot is a
+                machine that is capable of carrying out complex actions automatically, especially those that are
+                normally performed by
+                humans. Robotics involves the integration of various fields such as mechanical engineering, electrical
+                engineering, and
+                computer science to create robots that can perform tasks in a variety of settings, from manufacturing
+                and assembly lines
+                to space exploration and healthcare. Robotics has the potential to revolutionize many industries and
+                improve our lives
+                in numerous ways, but it also raises ethical and social concerns, particularly regarding the impact on
+                employment and
+                the role of robots in society.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed" style="color: #000;">What is
+              Engineering? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p style="color: #000;">
+                Engineering is the application of scientific and mathematical principles to design, develop, and build
+                structures,
+                machines, systems, and processes that solve practical problems. Engineers use their knowledge of
+                physics, mathematics,
+                and other sciences to create new technologies and improve existing ones. Engineering is a broad field
+                that encompasses
+                many different disciplines, including mechanical engineering, electrical engineering, civil
+                engineering, chemical
+                engineering, and many others. Engineers work in a variety of industries, including manufacturing,
+                construction,
+                transportation, energy, and healthcare. They play a critical role in shaping the world we live in and
+                improving our
+                quality of life.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+
+
+
+
+
+
+
+
+
+
+============= Result page ================
+<section class="inner-page" data-aos="fade-left" style="background-color: #fff;">
+				<div class="container">
+					<section id="scrollToSection1">
+						<!-- Content for Section 1 -->
+						<div class="container">
+
+							<h2>Island Rankers</h2>
+
+							<div class="row mt-3">
+								<div class="col-sm-12 col-lg-6" data-aos="fade-right" style="display: flex;
+								align-items: center;
+								flex-wrap: wrap;">
+								<img src="https://i.ibb.co/kD5Rm0v/Rank-Post.png" class="img-fluid rounded" alt="">
+							</div>
+							<div class="col-sm-12 col-lg-6" data-aos="fade-left">
+								<br><h3 style="text-align: justify;">Richmondites have yet again prevailed in the arena of GCE A/L 2022 by achieving Island Ranks and District ranks.</h3><br><br>
+
+								<h4>Island 1<sup>st</sup> - <b>Samuditha Nayanapriya</b></h4>
+								<h4>Island 4<sup>th</sup> - <b>Dinil Hansara</b></h4>
+								<h4>Island 12<sup>th</sup> - <b>YASANDU PARAMITH</b></h4>
+
+								<div class="mt-5"><br><br><h4 style="font-style: italic;">Scroll down or select the 'Result Analyze' to see analytics.</h4></div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+
+
+
+
+
+
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about" style="background-color: #fff;">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 style="color: #000;">About Us</h2>
+          <!-- <p></p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-lg-6" data-aos="fade-right" style="display: flex;
+          align-items: center;
+          flex-wrap: wrap;">
+            <img src="https://i.ibb.co/G31FCdv/1.jpg" class="img-fluid rounded" alt="">
+          </div>
+          <div class="col-sm-12 col-lg-6" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
+              <h3 style="color: #000;">Welcome Everyone! This is the Richmond College Technology Society!</h3>
+              <p class="fst-italic" style="color: #000;">
+                This is an organization that is focused on exploring and promoting technology in various forms within
+                the school community. Our purpose is to provide a platform for students to collaborate, learn, and
+                gain hands-on experience with cutting-edge tools and software. Here are some common duties that our
+                tech
+                society might undertake,
+              </p>
+              <ul>
+                <li style="color: #000;"><i class="bx bx-check-double"></i> Organizing and conducting workshops and
+                  seminars to teach
+                  students about the latest technological advancements and
+                  innovations</li>
+                <li style="color: #000;"><i class="bx bx-check-double"></i> Arranging tech-related events to promote
+                  interest and skill
+                  development in the field of technology</li>
+                <li style="color: #000;"><i class="bx bx-check-double"></i> Collaborating with other tech societies
+                  from different schools
+                  and colleges to share knowledge and expertise.</li>
+                <li style="color: #000;"><i class="bx bx-check-double"></i> Providing
+                  technical support and guidence
+                  to teachers and
+                  students on various aspects of technology, including hardware,
+                  software, and networking.</li>
+                <li style="color: #000;"><i class="bx bx-check-double"></i> Maintaining an up-to-date inventory of the
+                  school's
+                  technological resources, such as computers, tablets, and other
+                  devices, and ensuring that they are in good working condition.</li>
+              </ul>
+              <p style="color: #000;">
+                We believe that technology has the power to shape the future, and we want to empower students to be at
+                the forefront of
+                this transformation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
