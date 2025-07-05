@@ -8,7 +8,6 @@ Welcome to the official repository for the **Richmond College Technology Society
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/<your-org>/richmond-tech-society.git
-cd richmond-tech-society
-npm install
-npm run dev
+git clone https://github.com/richmond-college-ict/RCTS.git
+cd RCTS
+
