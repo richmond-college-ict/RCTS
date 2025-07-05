@@ -1,6 +1,6 @@
 # Richmond College Technology Society Website
 
-Welcome to the official repository for the **Richmond College Technology Society** website. This site serves as the digital hub for announcements, events, IT Day competitions, speaker details, and tech resources related to the society.
+Welcome to the official repository for the **Richmond College Technology Society** website. 
 
 🌐 **Live Website**: [tech.richmondcollege.lk](https://tech.richmondcollege.lk)
 
